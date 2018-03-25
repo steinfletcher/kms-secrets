@@ -8,12 +8,12 @@ import (
 	"regexp"
 	"strings"
 
+	"bytes"
 	"github.com/steinfletcher/kms-secrets/compress"
 	"github.com/steinfletcher/kms-secrets/kms"
-	"strconv"
 	"log"
-	"bytes"
 	"sort"
+	"strconv"
 )
 
 const (
@@ -140,7 +140,10 @@ func (ks *KmsSecrets) Decrypt(rootDir string) error {
 			case GZIP:
 				ks.decryptGzip(path, encryptedSecret)
 			default:
-				ks.decrypt(path, encryptedSecret)
+				err = ks.decrypt(path, encryptedSecret)
+				if err != nil {
+					return err
+				}
 			}
 		}
 		return nil
