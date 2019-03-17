@@ -1,5 +1,7 @@
 # kms-secrets
 
+[![Build Status](https://travis-ci.org/steinfletcher/kms-secrets.svg?branch=master)](https://travis-ci.org/steinfletcher/kms-secrets)
+
 CLI tool to encrypt and decrypt secrets using kms.
 
 # kms limits
