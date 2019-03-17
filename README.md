@@ -12,13 +12,14 @@ kms only encrypts up to 4096 bytes of data. This tools works around this limitat
 
 The chunked output follows a naming convention, e.g. `file.1of2.enc`, `file.2of2.enc`
 
-# Installation
+## Install
 
-    go get github.com/steinfletcher/kms-secrets
+The following script will install a binary from the latest tagged release
 
-OR
-
-    wget https://github.com/steinfletcher/kms-secrets/releases/download/v0.1.0/kms-secrets_0.1.0_darwin_amd64.tar.gz && tar zxf kms-secrets_0.1.0_darwin_amd64.tar.gz
+```bash
+curl https://raw.githubusercontent.com/steinfletcher/kms-secrets/master/download.sh | sh
+mv kms-secrets /usr/local/bin
+```
 
 # Examples
 
