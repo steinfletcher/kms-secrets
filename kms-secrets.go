@@ -89,7 +89,7 @@ func main() {
 			},
 		},
 	}
-	app.Version = "0.0.1"
+	app.Version = "0.1.2"
 	app.Run(os.Args)
 }
 
