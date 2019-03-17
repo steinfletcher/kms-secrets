@@ -1,8 +1,8 @@
 package compress
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestGzipCompressor(t *testing.T) {

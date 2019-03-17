@@ -1,10 +1,10 @@
 package kms
 
 import (
-	"github.com/aws/aws-sdk-go/service/kms"
+	"fmt"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
-	"fmt"
+	"github.com/aws/aws-sdk-go/service/kms"
 )
 
 type Kms interface {

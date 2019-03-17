@@ -1,8 +1,8 @@
 package compress
 
 import (
-	"compress/gzip"
 	"bytes"
+	"compress/gzip"
 	"io/ioutil"
 )
 
@@ -15,7 +15,7 @@ func NewGzipCompressor() Compressor {
 	return &GzipCompressor{}
 }
 
-type GzipCompressor struct {}
+type GzipCompressor struct{}
 
 func (c *GzipCompressor) Encode(content []byte) (error, []byte) {
 	var buffer bytes.Buffer

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"os"
 	"github.com/steinfletcher/kms-secrets/compress"
 	"github.com/steinfletcher/kms-secrets/kms"
-	"gopkg.in/urfave/cli.v1"
 	"github.com/steinfletcher/kms-secrets/secrets"
+	"gopkg.in/urfave/cli.v1"
+	"os"
 )
 
 var (
@@ -93,7 +93,7 @@ func main() {
 	app.Run(os.Args)
 }
 
-func context() (secrets.Secrets) {
+func context() secrets.Secrets {
 	compressor := compress.NewGzipCompressor()
 	kmsCli := kms.NewKms(keyID, region, profile)
 	return secrets.NewSecrets(kmsCli, compressor, filter)
