@@ -3,3 +3,4 @@
 /vendor
 *.enc
 kms-secrets
+.idea
